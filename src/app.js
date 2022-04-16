@@ -7,12 +7,12 @@ require('./db.js');
 
 const server = express();
 //deploy
-// const cors = require('cors');
+const cors = require('cors');
 
 server.name = 'API';
 
-//deploy
-// server.use(cors())
+// deploy
+server.use(cors())
 
 server.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 server.use(bodyParser.json({ limit: '50mb' }));
